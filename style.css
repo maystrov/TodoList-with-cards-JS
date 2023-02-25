@@ -1,221 +1,215 @@
 body {
-    font-family: sans-serif;
-    font-size: 16px;
-    background-color: #333;
-    padding: 10px;
-    color: white;
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: #333;
+  padding: 10px;
+  color: white;
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .form {
-    max-width: 330px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background-color: teal;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: none;
-
-
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: teal;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: none;
+  margin: 0 auto;
 }
 .hidden {
-    display: none;
+  display: none;
 }
 .visible {
-    display: flex;
+  display: flex;
 }
 
 .form > * {
-    width: 100%;
+  width: 100%;
 }
 
 .form input {
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
-    
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .create-card {
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 5px;
 }
 
 .create-card:hover {
-    background-color: #EA8725;
-    cursor:pointer;
-    box-shadow: 6px 6px 8px -1px rgba(0,0,0,0.73);
+  background-color: #ea8725;
+  cursor: pointer;
+  box-shadow: 6px 6px 8px -1px rgba(0, 0, 0, 0.73);
 }
 
 .create-card:active {
-    transform: translateY(2px);
+  transform: translateY(2px);
 }
 
-
-
-:active, :hover, :focus {
-    outline: 0;
-    outline-offset: 0;
+:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
 }
 
 #cards {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card {
-    display: grid;
-    padding: 10px;
-    max-width: 340px;
-    min-height: 150px;
-   
-    gap: 10px;
-    background-color:teal;
-    /* width: 250px; */
+  display: grid;
+  padding: 10px;
+  max-width: 340px;
+  min-height: 150px;
 
-    grid-template-columns: 200px 100px;
-    grid-template-rows: 30px auto;
-    grid-template-areas: 
-        "t c"
-        "d p"
-        "d s";
-        justify-items: center;
-    
-    border-radius: 5px;
-    margin: 10px;
-    padding-right: 10px;
+  gap: 10px;
+  background-color: teal;
+  /* width: 250px; */
+
+  grid-template-columns: 200px 100px;
+  grid-template-rows: 30px auto;
+  grid-template-areas:
+    't c'
+    'd p'
+    'd s';
+  justify-items: center;
+
+  border-radius: 5px;
+  margin: 10px;
+  padding-right: 10px;
 }
 
 .card > div {
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 5px 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 .title {
-    grid-area: t;
-    border: none !important
+  grid-area: t;
+  border: none !important;
 }
 
 .card .buttons {
-    grid-area: c;
-    display: flex;
-    padding-top: 0;
-    padding-bottom: 0;
-    align-self: center;
-    justify-self: end;
-    border: none;
-    padding: 0;
+  grid-area: c;
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 0;
+  align-self: center;
+  justify-self: end;
+  border: none;
+  padding: 0;
 }
 
 .buttons button {
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
 }
 
 .pencil {
-    margin-right: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
 .close-btn {
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 24px;
-    border-radius: 3px;
-    border: none;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 24px;
+  border-radius: 3px;
+  border: none;
 }
 
 .close-btn:hover {
-    background-color:darkslateblue;
-    border: 5px solid darkslateblue;
-    color: white;
+  background-color: darkslateblue;
+  border: 5px solid darkslateblue;
+  color: white;
 }
 
 .description {
-    grid-area: d;
-    width: 100%;
-
+  grid-area: d;
+  width: 100%;
 }
 
 .card .priority {
-    grid-area: p;
-    align-self:center;
-    justify-self: start;
-    max-width: 50px;
-    padding-left: 0;
-    border: none;
-
+  grid-area: p;
+  align-self: center;
+  justify-self: start;
+  max-width: 50px;
+  padding-left: 0;
+  border: none;
 }
 
 .card .status {
-    grid-area: s;
-    align-self:center;
-    justify-self: start;
-    max-width: 50px;
-    padding-left: 7px;
-    padding-left: 0;
-    border: none;
+  grid-area: s;
+  align-self: center;
+  justify-self: start;
+  max-width: 50px;
+  padding-left: 7px;
+  padding-left: 0;
+  border: none;
 }
 
 img {
-    width: 15px;
+  width: 15px;
 }
 
 select {
-    width: 100px;
-    cursor: pointer;
-    border-radius: 3px;
-    border: 5px solid white;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 5px solid white;
 }
 
 select:hover {
-    background-color: #EA8725;
-    border: 5px solid #EA8725;
-    color: white;
+  background-color: #ea8725;
+  border: 5px solid #ea8725;
+  color: white;
 }
 
 .card .text-active {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(197, 213, 231, 0.5);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(197, 213, 231, 0.5);
 }
 
 .form-desc {
-    min-height: 80px;
+  min-height: 80px;
 }
 
 .new-card {
-    min-width: 150px;
-    margin: 20px auto;
-    display: block;
-    padding: 10px 20px;
-    border-radius: 38px;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    cursor: pointer;
-    border: none;
-    
+  min-width: 150px;
+  margin: 20px auto;
+  display: block;
+  padding: 10px 20px;
+  border-radius: 38px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  border: none;
 }
 
 .new-card:hover {
-    background-color: #EA8725;
-    box-shadow: 6px 6px 8px -1px rgba(0,0,0,0.73);
+  background-color: #ea8725;
+  box-shadow: 6px 6px 8px -1px rgba(0, 0, 0, 0.73);
 }

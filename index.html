@@ -1,80 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
     <title>Todo with Priorities</title>
-</head>
-<body> 
-   
-
+  </head>
+  <body>
     <div id="main">
+      <button class="new-card">Add new card</button>
 
-        <button class=" new-card">Add new card</button>
+      <form action="." class="form" name="createForm">
+        <input
+          type="text"
+          name="title"
+          class="form-title"
+          placeholder="Enter title"
+        />
+        <input
+          type="text"
+          name="desc"
+          class="form-desc"
+          placeholder="Enter description"
+        />
+        <div class="choose-text">Choose priority:</div>
+        <select name="priority" class="form-priority">
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+        </select>
 
-        <form action="." class="form" name="createForm">
+        <div class="choose-text">Choose status:</div>
 
-            <input type="text" name="title" class="form-title" placeholder="Enter title">
+        <select name="status" class="form-status">
+          <option>Todo</option>
+          <option>Progress</option>
+          <option>Done</option>
+        </select>
 
-           
-            <input type="text" name="desc" class="form-desc" placeholder="Enter description">
+        <button name="createBtn" class="create-card">Create card</button>
+      </form>
 
-            <div class="choose-text">Choose priority:</div>
-            <select name="priority" class="form-priority">
-                <option>Low</option>
-                <option>Medium</option>
-                <option>High</option>
-            </select>
-
-            <div class="choose-text">Choose status:</div>
-
-            <select name="status" class="form-status">
-               <option>Todo</option>
-               <option>Progress</option>
-               <option>Done</option>
-           </select>
-
-           <button name="createBtn" class="create-card">Create card</button>
-
-
-        </form>
-
-        <div id="cards">
-            <!-- <div class="card">
-                <div class="title">Title</div>
-                <div class="buttons">
-                    <button class="button pencil">
-                        <img src="https://cdn-icons-png.flaticon.com/512/4277/4277132.png" alt="pen">
-                    </button>
-                    <button class="close-btn">X</button>
-                </div>
-                <div class="priority">
-                    <select class="select-priority">
-                        <option selected>Low</option>
-                        <option>Low</option>
-                        <option>Medium</option>
-                        <option>High</option>
-                    </select>
-                </div>
-                <div class="status">
-                    <select class="select-status">
-                         <option selected>Done</option>
-                        <option selected>Todo</option>
-                        <option>Todo</option>
-                        <option>Progress</option>
-                        <option>Done</option>
-                    </select>
-                </div>
-                <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, vero?</div>
-            </div> -->
-        </div>
-       
-
-
+      <div id="cards"></div>
     </div>
-    
-</body>
+  </body>
 </html>
